@@ -8,20 +8,31 @@ import android.widget.TextView
 import kotlin.math.log
 
 class SecondActivity : AppCompatActivity() {
-    private lateinit var secText : TextView
+    private lateinit var email : TextView
+    private lateinit var nameText : TextView
     private lateinit var onSave : Button
     private lateinit var emailAddress : EditText
+    private lateinit var name : EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
-        secText = findViewById(R.id.secondText)
+        email = findViewById(R.id.secondText)
         onSave = findViewById(R.id.saveBtn)
+        nameText = findViewById(R.id.nameText)
         emailAddress = findViewById(R.id.emailAddress)
-        secText.text = ""
+        email.text = ""
+        name = findViewById(R.id.name)
+        nameText.text = ""
+
 
         onSave.setOnClickListener {
-            if(emailAddress.text.isEmpty() ) secText.text = "Text Field cant be empty" else secText.text = emailAddress.text
+            if(emailAddress.text.isEmpty() ) {
+                email.text = "Text Field cant be empty"
+            } else {
+                email.text = emailAddress.text
+                nameText.text = name.text
+            }
         }
 
     }
