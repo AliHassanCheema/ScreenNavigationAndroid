@@ -13,8 +13,6 @@ class MainActivity : AppCompatActivity() {
         naviBtn = findViewById(R.id.navigationBtn)
         naviBtn.setOnClickListener{
             startActivity(Intent(this, SecondActivity ::class.java))
-
-
         }
     }
 }
