@@ -11,5 +11,6 @@ class SecondActivity : AppCompatActivity() {
         setContentView(R.layout.activity_second)
         secText = findViewById(R.id.secondText)
         secText.text = "ALi Hassan"
+
     }
 }
