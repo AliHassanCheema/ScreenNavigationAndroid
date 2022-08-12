@@ -7,7 +7,7 @@
     tools:context=".SecondActivity">
 
     <TextView
-        android:id="@+id/secondText"
+        android:id="@+id/emailText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
@@ -21,7 +21,6 @@
         android:id="@+id/nameText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:textColor="#B86060"
         android:textSize="20sp"
         android:layout_marginTop="60sp"
@@ -32,24 +31,25 @@
 
     <EditText
 
-        android:hint="Name"
+        android:hint="Enter Your Name"
         android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60sp"
         android:ems="10"
-        android:inputType="textEmailAddress"
+        android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/emailAddress"
+        android:id="@+id/email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="120sp"
         android:ems="10"
-        android:hint="Email"
+        android:textStyle="bold"
+        android:hint="Enter Your Email"
         android:inputType="textEmailAddress"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintEnd_toEndOf="parent"
