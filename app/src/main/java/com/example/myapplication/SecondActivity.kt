@@ -24,7 +24,7 @@ class SecondActivity : AppCompatActivity() {
         email = findViewById(R.id.email)
         emailText.text = ""
         name = findViewById(R.id.name)
-        nameText.text = ""
+        nameText.text = intent.getStringExtra("key")
 
 
         onSave.setOnClickListener {
@@ -33,9 +33,12 @@ class SecondActivity : AppCompatActivity() {
             } else {
                 emailText.text = email.text
                 nameText.text = name.text
-                    startActivity(Intent(this, MainActivity ::class.java).putExtra("uname", name.text.toString()).putExtra("uemail", email.text.toString())
 
-                )
+                val intent = Intent()
+                intent.putExtra("name", "${name.text}")
+                intent.putExtra("email", "${email.text}")
+                setResult(RESULT_OK, intent)
+                onBackPressed()
             }
         }
 

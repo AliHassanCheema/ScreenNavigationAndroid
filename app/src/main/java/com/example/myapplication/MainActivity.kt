@@ -27,7 +27,19 @@ class MainActivity : AppCompatActivity() {
         }
 
         naviBtn.setOnClickListener{
-            startActivity(Intent(this, SecondActivity ::class.java))
+            val intent = Intent(this, SecondActivity ::class.java)
+            intent.putExtra("name", "name")
+            intent.putExtra("email", "name")
+            startActivityForResult(intent, 1)
+
+        }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == 1){
+             userName.text = "Name: ${data!!.getStringExtra("name")}"
+            email.text = "Email: ${data!!.getStringExtra("email")}"
         }
     }
 }

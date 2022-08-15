@@ -34,9 +34,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="20sp"
         android:backgroundTint="#939292"
-        android:text="navigate"
         android:textSize="30sp"
-        app:icon="@android:drawable/ic_btn_speak_now"
+        app:icon="@android:drawable/ic_media_next"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
